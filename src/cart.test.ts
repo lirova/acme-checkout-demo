@@ -19,6 +19,9 @@ describe("applyDiscount", () => {
   it("returns the same amount for a 0% discount", () => {
     expect(applyDiscount(100, 0)).toBe(100);
   });
+  it("returns 0 for a 100% discount", () => {
+    expect(applyDiscount(100, 100)).toBe(0);
+  });
 });
 
 describe("withTax", () => {
