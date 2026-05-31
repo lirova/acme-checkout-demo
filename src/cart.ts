@@ -14,7 +14,7 @@ export function subtotal(items: LineItem[]): number {
  * e.g. applyDiscount(100, 20) should return 80 (20% off).
  */
 export function applyDiscount(amount: number, percentOff: number): number {
-  return amount + amount * (percentOff / 100);
+  return amount - amount * (percentOff / 100);
 }
 
 /** Add sales tax to an amount. taxRate is a fraction, e.g. 0.08 for 8%. */
